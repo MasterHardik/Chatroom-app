@@ -94,12 +94,13 @@ body{
 
 .chat-screen .header button{
     padding: 5px 10px ;
-    border:1px solid #eee;
+    /* border:1px solid #eee; */
     background: transparent;
     color: #eee;
     font-size: 15px;
     cursor: pointer;
     outline: none;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
 }
 
 .chat-screen .messages{

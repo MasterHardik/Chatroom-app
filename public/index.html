@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>ChatRoom App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
-        <div class="screen join-screen ">
-            <div class="form">
-                <h2>Join Chatroom</h2>
-                <div class="form-input">
-                    <label> Username</label>
-                    <input type="text" id="username">
-                </div>
-                <div class="form-input">
-                    <button id="join-user">Join</button>
-                </div>
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Join Chatroom</h2>
+          <div class="form-input">
+            <label>Username</label>
+            <input type="text" id="username" />
+          </div>
+          <div class="form-input">
+            <button id="join-user">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="screen chat-screen">
+        <div class="header">
+          <div class="logo">Chatroom</div>
+          <button id="exit-chat">Exit</button>
+        </div>
+        <!-- Dummy Messages -->
+        <div class="messages">
+          <div class="message my-message">
+            <!-- <div>
+              <div class="name">You</div>
+              <div class="text">Hi</div>
+            </div> -->
+          </div>
+          <!-- <div class="update">Abc joined the conversation</div> -->
+          <div class="message other-message">
+              <!-- <div>
+                  <div class="name">Abc</div>
+                  <div class="text">Hi</div>
+                </div> -->
             </div>
         </div>
-        <div class="screen chat-screen active">
-            <div class="header">
-                <div class="logo">Chatroom</div>
-                <button id="exit-chat">Exit</button>
-            </div>
-            <div class="messages">
-                <!-- Dummy Messages -->
-                <div class="message my-message">
-                    <div>
-                        <div class="name">You</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="update">
-                    Abc is joined the conversation
-                </div>
-                <div class="message other-message">
-                    <div>
-                        <div class="name">Abc</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-            </div>
-            <div class="typebox">
-                <input type="text" id="message-input">
-                <button id="send-message">Send</button>
-            </div>
+        <!-- Dummy Messages -->
+        <div class="typebox">
+          <input type="text" id="message-input" />
+          <button id="send-message">Send</button>
         </div>
+      </div>
     </div>
 
-    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="./code.js"></script>
-</body>
+  </body>
 </html>
